@@ -5,7 +5,7 @@
         ["env"], "react", "stage-0"
       ],
       "plugins": ["add-module-exports", ["import", {
-        "libraryName": "@alipay/qingtai",
+        "libraryName": "@alipay/kb-cook",
         "style": true
       }]]
     },
@@ -16,7 +16,7 @@
         }], "react", "stage-0"
       ],
       "plugins": ["add-module-exports", ["import", {
-        "libraryName": "@alipay/qingtai",
+        "libraryName": "@alipay/kb-cook",
         "style": true
       }]]
     }
