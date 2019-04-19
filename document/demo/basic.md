@@ -24,3 +24,9 @@ class Demo extends React.Component {
 
 ReactDOM.render(<Demo />, mountNode);
 ````
+
+````css
+body {
+  background: #fff;
+}
+````
