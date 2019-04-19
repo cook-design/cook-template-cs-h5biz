@@ -1,0 +1,24 @@
+{
+  "env": {
+    "common": {
+      "presets": [
+        ["env"], "react", "stage-0"
+      ],
+      "plugins": ["add-module-exports", ["import", {
+        "libraryName": "@alipay/qingtai",
+        "style": true
+      }]]
+    },
+    "es": {
+      "presets": [
+        ["env", {
+          "modules": false
+        }], "react", "stage-0"
+      ],
+      "plugins": ["add-module-exports", ["import", {
+        "libraryName": "@alipay/qingtai",
+        "style": true
+      }]]
+    }
+  }
+}
