@@ -29,3 +29,4 @@ config/base.yaml
 *.gz
 .vscode
 package-lock.json
+yarn.lock
