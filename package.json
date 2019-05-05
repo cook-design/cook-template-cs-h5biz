@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "main": "lib/index.js",
-  "types": "lib/index.d.js",
+  "types": "lib/index.d.ts",
   "module": "es/index.js",
   "devDependencies": {
     "babel-cli": "6",
@@ -60,12 +60,12 @@
     "srclint": "eslint site src scripts --ext '.js,.jsx'",
     "demolint": "cross-env RUN_ENV=DEMO eslint document/**/*.md --ext '.md'",
     "stylelint": "stylelint src/**/*.less --syntax less",
+    "copydts": "cp index.d.ts lib/",
     "compile": "rimraf ./lib & rimraf ./es && npm run compile:js && npm run compile:es",
     "compile:js": "cross-env BABEL_ENV=common babel src --out-dir ./lib --copy-files",
     "compile:es": "cross-env BABEL_ENV=es babel src --out-dir ./es --copy-files"
   },
   "pre-commit": [
     "lint"
-  ],
-  "typings": "index.d.ts"
+  ]
 }
