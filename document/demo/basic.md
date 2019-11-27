@@ -1,32 +1,47 @@
 ---
 order: 1
-title: demo1
-demoType: ''
-demoUrl: ''
+title: 基础示例
+demoType: ""
+demoUrl: ""
 ---
 
-移动端模板
+基础示例
 
-````jsx
-import TemplateWap from '{{ name }}';
+```jsx
+import WingBlank from "{{ name }}";
+import PropTypes from 'prop-types';
 
-class Demo extends React.Component {
-  componentDidMount() {
-    console.log('TemplateWap did mount');
-  }
+const PlaceHolder = ({ className = '', ...restProps }) => (
+  <div className={`${className} placeholder`} {...restProps}>Block</div>
+);
 
-  render() {
-    return (
-      <TemplateWap title="test" />
-    );
-  }
-}
+PlaceHolder.propTypes = {
+  className: PropTypes.string,
+};
+
+const Demo = () => (
+  <div>
+    <WingBlank><PlaceHolder /></WingBlank>
+    <WingBlank size="md"><PlaceHolder /></WingBlank>
+    <WingBlank size="sm"><PlaceHolder /></WingBlank>
+  </div>
+);
 
 ReactDOM.render(<Demo />, mountNode);
-````
+```
 
-````css
-body {
-  background: #fff;
+```css
+.cook-wing-blank {
+  margin-bottom: 0.2rem;
 }
-````
+
+.placeholder {
+  background-color: #ebebef;
+  color: #bbb;
+  text-align: center;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  width: 100%;
+  font-size: 0.28rem;
+}
+```
