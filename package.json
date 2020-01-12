@@ -1,6 +1,6 @@
 {
   "name": "cook-cs-h5biz",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "辰森H5业务组件模板",
   "homepage": "",
   "author": "yongbao.fyb",
@@ -60,8 +60,8 @@
   },
   "scripts": {
     "lint": "npm run tslint && npm run stylelint",
-    "tslint": "eslint ./src --ext '.ts,.tsx,.js,.jsx' --fix",
-    "stylelint": "stylelint src/**/*.less --syntax less --fix"
+    "tslint": "eslint --ext '.ts,.tsx,.js,.jsx' --fix",
+    "stylelint": "stylelint \"./src/**/*.less\" --syntax less --fix"
   },
   "pre-commit": [
     "lint"
